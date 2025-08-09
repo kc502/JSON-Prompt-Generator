@@ -1,0 +1,200 @@
+/* အခြေခံ Style များ */
+body {
+    font-family: sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    position: relative;
+}
+
+/* Theme Toggle Button Icon Style */
+#themeToggleBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* စက်ဝိုင်းပုံစံ */
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    overflow: hidden; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#themeToggleBtn i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button ကို ဘဲဥပုံစံ ပြောင်းလဲခြင်း */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.output-section {
+    margin-top: 30px;
+}
+
+pre {
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* Night Mode အတွက် Style များ */
+body[data-theme="dark"] {
+    background-color: #282c34;
+    color: #abb2bf;
+}
+body[data-theme="dark"] .container {
+    background-color: #3e4452;
+}
+body[data-theme="dark"] h1, body[data-theme="dark"] h2 {
+    color: #61afef;
+}
+body[data-theme="dark"] textarea, body[data-theme="dark"] input[type="text"] {
+    background-color: #282c34;
+    color: #abb2bf;
+    border-color: #5c6370;
+}
+body[data-theme="dark"] pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    border-color: #5c6370;
+}
+body[data-theme="dark"] #generateBtn {
+    background-color: #98c379;
+    color: #282c34;
+}
+body[data-theme="dark"] #generateBtn:hover {
+    background-color: #739d5b;
+}
+body[data-theme="dark"] #copyBtn {
+    background-color: #c678dd;
+    color: #282c34;
+}
+body[data-theme="dark"] #copyBtn:hover {
+    background-color: #a557bd;
+}
+body[data-theme="dark"] #themeToggleBtn {
+    background-color: #5c6370;
+    color: #fff;
+}
+body[data-theme="dark"] #themeToggleBtn:hover {
+    background-color: #4b525f;
+}
+body[data-theme="dark"] #themeToggleBtn .fa-sun {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+}
+body[data-theme="dark"] #themeToggleBtn .fa-moon {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Light Mode အတွက် Style များ */
+body[data-theme="light"] {
+    background-color: #f0f2f5;
+    color: #333;
+}
+body[data-theme="light"] .container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body[data-theme="light"] h1, body[data-theme="light"] h2 {
+    color: #007bff;
+}
+body[data-theme="light"] textarea, body[data-theme="light"] input[type="text"] {
+    background-color: #f8f9fa;
+    color: #333;
+    border-color: #ced4da;
+}
+body[data-theme="light"] pre {
+    background-color: #f8f9fa;
+    color: #333;
+    border-color: #ced4da;
+}
+body[data-theme="light"] #generateBtn {
+    background-color: #28a745;
+    color: #fff;
+}
+body[data-theme="light"] #generateBtn:hover {
+    background-color: #218838;
+}
+body[data-theme="light"] #copyBtn {
+    background-color: #007bff;
+    color: #fff;
+}
+body[data-theme="light"] #copyBtn:hover {
+    background-color: #0056b3;
+}
+body[data-theme="light"] #themeToggleBtn {
+    background-color: #ced4da;
+    color: #333;
+}
+body[data-theme="light"] #themeToggleBtn:hover {
+    background-color: #adb5bd;
+}
+body[data-theme="light"] #themeToggleBtn .fa-sun {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+body[data-theme="light"] #themeToggleBtn .fa-moon {
+    opacity: 0;
+    transform: translate(-50%, -150%);
+}
