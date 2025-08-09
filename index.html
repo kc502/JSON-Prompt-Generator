@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Scene JSON Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <button id="themeToggleBtn">
+            <i class="fas fa-sun"></i> <i class="fas fa-moon"></i> </button>
+
+        <h1>Video Scene JSON Generator</h1>
+
+        <div class="input-section">
+            <label for="total_runtime">[TOTAL RUNTIME]</label>
+            <input type="text" id="total_runtime" placeholder="e.g., 8 seconds">
+        </div>
+
+        <div class="input-section">
+            <label for="location_set">[LOCATION & SET]</label>
+            <textarea id="location_set" placeholder="A slightly messy teenage bedroom interior, at night."></textarea>
+        </div>
+
+        <div class="input-section">
+            <label for="weather">[WEATHER]</label>
+            <input type="text" id="weather" placeholder="e.g., Heavy rain">
+        </div>
+
+        <div class="input-section">
+            <label for="characters">[CHARACTERS - FULL APPEARANCE]</label>
+            <textarea id="characters" placeholder="Anna (17): A teenage girl with long, lightly messy hair..."></textarea>
+        </div>
+        
+        <div class="input-section">
+            <label for="dialogue">[DIALOGUE]</label>
+            <textarea id="dialogue" placeholder="e.g., Anna speaks angrily: 'Aku udah capek, Bud.'"></textarea>
+        </div>
+
+        <div class="input-section">
+            <label for="visual_style">[VISUAL STYLE]</label>
+            <input type="text" id="visual_style" placeholder="e.g., Cinematic, with neon lighting and saturated colors.">
+        </div>
+
+        <div class="input-section">
+            <label for="lens">[LENS]</label>
+            <input type="text" id="lens" placeholder="e.g., Standard lens (50mm)">
+        </div>
+
+        <div class="input-section">
+            <label for="camera_motion">[CAMERA & MOTION]</label>
+            <input type="text" id="camera_motion" placeholder="e.g., Handheld camera">
+        </div>
+
+        <div class="input-section">
+            <label for="audio">[AUDIO]</label>
+            <textarea id="audio" placeholder="e.g., Melancholic lo-fi music playing from a laptop."></textarea>
+        </div>
+        
+        <div class="input-section">
+            <label for="actions">[ACTIONS]</label>
+            <textarea id="actions" placeholder="e.g., Anna: Pacing in front of the study table."></textarea>
+        </div>
+
+        <div class="input-section">
+            <label for="shot_list_timing">[SHOT LIST & TIMING]</label>
+            <textarea id="shot_list_timing" placeholder="e.g., 0s-4s: Camera focuses on Anna, who speaks with a tired expression."></textarea>
+        </div>
+
+        <div class="input-section">
+            <label for="continuity_notes">[CONTINUITY NOTES]</label>
+            <textarea id="continuity_notes" placeholder="e.g., Make sure the purple light from the LED strip is consistent..."></textarea>
+        </div>
+
+        <button id="generateBtn">Generate JSON</button>
+
+        <div class="output-section">
+            <h2>Generated JSON:</h2>
+            <pre><code id="jsonOutput"></code></pre>
+            <button id="copyBtn">Copy JSON</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
